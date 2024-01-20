@@ -1,0 +1,25 @@
+.left-nav button {
+    width: 267px;
+    height: 64px;
+    border-radius: 5px;
+    border: 1px solid var(--Dark-06, #E7E7E7);
+    color: var(--Dark-02, #403F3F);
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    background: var(--Dark-06, #E7E7E7);
+
+}
+
+.left-nav a {
+    text-decoration: none;
+    color: var(--Dark-04, #9F9F9F);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    padding-left: 70px;
+    
+}
