@@ -1,4 +1,4 @@
-import { Navigate, createBrowserRouter } from "react-router-dom";
+import {  Navigate, createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 
 import Category from "../pages/Home/category/Category";
@@ -9,6 +9,8 @@ import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Tearms from "../pages/Shared/Tearms/Tearms";
+import About from "../pages/About/About";
+import Home from "../pages/Home/Home/Home";
 
 const router = createBrowserRouter([
 
@@ -18,8 +20,15 @@ const router = createBrowserRouter([
         children:[
             {
                 path: '/',
-                element: <Navigate to='/category/0'></Navigate>
-
+                element: <Home></Home>
+            },
+            {
+                path:'/Internationalnews',
+                element: <Navigate to={`/category/0`}></Navigate>
+            },
+            {
+                path:'/about',
+                element: <About></About>
             },
             {
                 path: '/login',
@@ -41,7 +50,9 @@ const router = createBrowserRouter([
         path: '/category',
         element: <Main></Main>,
         children: [
-           
+
+            
+        
             {
                 path:':id',
                 element: <Category></Category>,

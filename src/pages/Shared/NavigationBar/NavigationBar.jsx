@@ -3,11 +3,13 @@
 import { useContext } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { FaUserCircle } from 'react-icons/fa';
-import { Link } from "react-router-dom";
+import { Link  } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 // import AuthProvider from "../../../provider/AuthProvider";
 
 const NavigationBar = () => {
+
+    
 
     const { user, logOut } = useContext(AuthContext)
 
@@ -29,7 +31,7 @@ const NavigationBar = () => {
                                 <Link className='text-decoration-none text-black fs-5' to="/">Home</Link>
                             </Nav.Link>
                             <Nav.Link className="text-black fs-5" href="/about">About</Nav.Link>
-                            <Nav.Link className="text-black fs-5" href="/career">Career</Nav.Link>
+                            <Nav.Link className="text-black fs-5" href={"/Internationalnews"}>News</Nav.Link>
                         </Nav>
                         <Nav className='d-flex align-items-center'>
                             {user && <Nav.Link href="#deets">

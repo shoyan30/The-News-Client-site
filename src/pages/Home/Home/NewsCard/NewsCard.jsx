@@ -8,11 +8,14 @@ import './NewsCard.css';
 import moment from "moment";
 import { FaEye, FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
+import Header from "../../../Shared/Header/Header";
 
 const NewsCard = ({ news }) => {
     const { _id, title, image_url, details, author, total_view, rating } = news;
     return (
-        <Card className="mb-4">
+       <div>
+        
+             <Card className="mb-4">
             <Card.Header className="d-flex CardHeader">
                 <Image className="authorImg" src={author.img} roundedCircle />
 
@@ -53,6 +56,7 @@ const NewsCard = ({ news }) => {
                 </div>
             </Card.Footer>
         </Card >
+       </div>
     );
 };
 
